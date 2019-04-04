@@ -1,0 +1,3 @@
+../data\images/test\A\IMG_20190405_080326.jpg	A
+../data\images/test\Y\IMG_20190405_075742.jpg	Y
+../data\images/test\N\IMG_20190405_075913.jpg	N

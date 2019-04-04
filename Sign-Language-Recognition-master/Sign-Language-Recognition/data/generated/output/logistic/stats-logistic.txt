@@ -1,0 +1,21 @@
+Model used = 'logistic'Classifier model details:
+LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
+          intercept_scaling=1, max_iter=100, multi_class='warn',
+          n_jobs=None, penalty='l2', random_state=None, solver='warn',
+          tol=0.0001, verbose=0, warm_start=False)
+
+Model score:
+1.00000
+
+Classification report:
+              precision    recall  f1-score   support
+
+           A       1.00      1.00      1.00        29
+           N       1.00      1.00      1.00         7
+           Y       1.00      1.00      1.00        35
+
+   micro avg       1.00      1.00      1.00        71
+   macro avg       1.00      1.00      1.00        71
+weighted avg       1.00      1.00      1.00        71
+
+

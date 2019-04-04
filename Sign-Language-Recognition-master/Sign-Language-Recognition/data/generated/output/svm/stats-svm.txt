@@ -1,0 +1,21 @@
+Model used = 'svm'Classifier model details:
+LinearSVC(C=1.0, class_weight=None, dual=True, fit_intercept=True,
+     intercept_scaling=1, loss='squared_hinge', max_iter=1000,
+     multi_class='ovr', penalty='l2', random_state=None, tol=0.0001,
+     verbose=0)
+
+Model score:
+1.00000
+
+Classification report:
+              precision    recall  f1-score   support
+
+           A       1.00      1.00      1.00        29
+           N       1.00      1.00      1.00         7
+           Y       1.00      1.00      1.00        35
+
+   micro avg       1.00      1.00      1.00        71
+   macro avg       1.00      1.00      1.00        71
+weighted avg       1.00      1.00      1.00        71
+
+

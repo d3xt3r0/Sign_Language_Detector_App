@@ -9,6 +9,7 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -19,6 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.hellohasan.android_file_upload_tutorial.ModelClass.EventModel;
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private Button uploadButton;
     private TextView responseTextView;
+    private ProgressBar mProgressBar;
     File photoFile = null;
 
     private static String ip = "Hello";
@@ -60,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         if (event.isTagMatchWith("response")) {
             String responseMessage = "Response from Server:\n" + event.getMessage();
             responseTextView.setText(responseMessage);
+            mProgressBar.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -73,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
         uploadButton = (Button) findViewById(R.id.uploadButton);
         responseTextView = (TextView) findViewById(R.id.responseTextView);
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+
 
         verifyStoragePermissions(this);
     }
@@ -162,6 +168,7 @@ public class MainActivity extends AppCompatActivity {
         ip = name;
 
         responseTextView.setText("");
+        mProgressBar.setVisibility(View.VISIBLE);
        // int age = Integer.parseInt(ageEditText.getText().toString());
         NetworkCall.fileUpload(filePath, new ImageSenderInfo(name));
     }

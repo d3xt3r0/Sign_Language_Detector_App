@@ -33,6 +33,9 @@ def write_frame_to_file(frame, frame_label, writer):
     logger.debug("Writing frame to file...")
     flattened_frame = frame.flatten()
     output_line = [frame_label] + np.array(flattened_frame).tolist()
+    """
+        Make a line with label and flattened pixel values and write it to the csv file
+    """
     writer.writerow(output_line)
     logger.debug("Done!")
 

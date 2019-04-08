@@ -41,6 +41,9 @@ def write_images_labels_to_file(images_labels_list, output_file_path):
     Writes the list of images-labels to a file.
     """
     os.makedirs(os.path.dirname(output_file_path), exist_ok=True)
+    """
+        Write file location and the folder name as the label to a txt file
+    """
     with open(output_file_path, "w") as output_file:
         for image_info in images_labels_list:
             image_path = image_info['image_path']
@@ -51,6 +54,9 @@ def write_images_labels_to_file(images_labels_list, output_file_path):
 
 def main():
     images_source = sys.argv[1]
+    """
+        Folder name taken as argv[1]
+    """
     if images_source not in ['train', 'test']:
         logger.error("Invalid image-source '{}'!".format(images_source))
         return

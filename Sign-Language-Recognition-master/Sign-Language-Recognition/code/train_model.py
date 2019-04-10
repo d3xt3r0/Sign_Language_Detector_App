@@ -84,6 +84,7 @@ def divide_data_train_test(images, labels, ratio):
 
 
 def main():
+    #Get the classifier name
     model_name = sys.argv[1]
     if model_name not in ['svm', 'logistic', 'knn']:
         logger.error("Invalid model-name '{}'!".format(model_name))
